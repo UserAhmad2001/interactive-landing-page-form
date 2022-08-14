@@ -11,9 +11,9 @@
         display: grid;
         grid-template-columns: repeat(2, 50%);
         position: absolute;
-        top: 35%;
+        top: 15%;
         left: 100%;
-        transform: translate(-70%, -50%);
+        transform: translate(-70%, 0);
         background-image: url(../assets/images/bg-card-front.png);
         background-repeat: no-repeat;
         background-size: contain;
@@ -60,8 +60,8 @@
         background-image: url(../assets/images/bg-card-back.png);
         position: absolute;
         left: 100%;
-        top: 70%;
-        transform: translate(-50%, -50%);
+        top: 50%;
+        transform: translate(-50%, 0);
         width: 17rem;
         height: 9rem;
 
