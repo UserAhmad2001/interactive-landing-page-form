@@ -1,0 +1,45 @@
+@use './variables' as *;
+
+input[type=text],input[type=number]{
+    border-radius: .3rem;
+    font-size: .7rem;
+    padding: .5rem;
+    border-color: $light-grayish-violet;
+    border-width: 2px;
+    background-color: transparent;
+    outline: transparent;
+    border-style: solid;
+
+    &:focus,:active,:focus-within{
+        // border:2px solid;
+        border-image: $input-grad 1;
+        border-radius: .3rem;
+    }
+}
+
+
+.field-title{
+    font-size: .6rem;
+    margin-bottom: .2rem;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
+.name-warn,.number-warn,.expire-month-year-warn,.cvc-warn{
+font-size: .5rem;
+margin-top: .2rem;
+color: $err;
+display: none;
+}
