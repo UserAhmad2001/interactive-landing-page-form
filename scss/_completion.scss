@@ -1,3 +1,41 @@
+@use './variables' as *;
+
 .completion-message{
     display: none;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    max-width: 18rem;
+
+
+    img{
+        margin-bottom: 1.5rem;
+    }
+
+    h1{
+        font-size: 1.5rem;
+        margin-bottom: .5rem;
+    }
+
+    p{
+        color: $dark-grayish-violet;
+        margin-bottom: 2rem;
+        font-size: .8rem;
+    }
+
+    button{
+        border: none;
+        background-color: $dark-violet;
+        color: white;
+        width: 100%;
+        padding-block: .5rem;
+        font-size: .8rem;
+        border-radius: .2rem;
+        cursor: pointer;
+
+        &:hover{
+            filter: brightness(1.2);
+        }
+    }
 }
