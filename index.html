@@ -29,30 +29,30 @@
 
     <div class="name">
       <p class="field-title">CARDHOLDER NAME</p>
-      <input onclick="inputClick()" class="name-field" type="text" required placeholder="e.g. Jane Appleseed">
+      <input  class="name-field" type="text" required placeholder="e.g. Jane Appleseed">
       <p class="name-warn">CAN'T BE BLANK</p>
     </div>
     
     
     <div class="number">
       <p class="field-title">CARD NUMBER</p>
-      <input onclick="inputClick()" class="num-field" type="number" placeholder="e.g. 1234 5678 9123 0000">
+      <input  class="num-field" type="text" placeholder="e.g. 1234 5678 9123 0000">
       <p class="number-warn">VALUE MUST BE 16 DIGITS</p>
     </div>
 
     <div class="expire">
       <p class="field-title">Exp. Date (MM/YY)</p>
 
-      <input onclick="inputClick()" class="month-field" type="number" placeholder="MM">
+      <input  class="month-field" type="number" placeholder="MM">
       
-      <input onclick="inputClick()" class="year-field" type="number" placeholder="YY">
+      <input  class="year-field" type="number" placeholder="YY">
       
       <p class="expire-month-year-warn">MONTH AND YEAR FIELDS CAN'T BE BLANK</p>
     </div>
     
     <div class="cvc">
       <p class="field-title">CVC</p>
-      <input onclick="inputClick()" class="cvc-field" type="number" placeholder="e.g. 123">
+      <input  class="cvc-field" type="number" placeholder="e.g. 123">
       <p class="cvc-warn">CAN'T BE BLANK</p>
     </div>
     
@@ -68,7 +68,7 @@
   <img src="./assets/images/icon-complete.svg" alt="completion icon">
   <h1>Thank you!</h1>
   <p>We've added your card details</p>
-  <button onclick="confirmBtnClick">Continue</button>
+  <button onclick="continueBtn()">Continue</button>
 </section>
 
 
