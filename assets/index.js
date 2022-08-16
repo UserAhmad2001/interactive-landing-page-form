@@ -80,7 +80,6 @@ function input_change(ev){
     }
     else if(ev.currentTarget===num_field){
         num_field_process_value()
-        document.querySelector('.card-num').innerHTML = num_field.value
     }
     else if(ev.currentTarget===month_field){
         document.querySelector('.expire-date').innerHTML = month_field.value+'/'+year_field.value
@@ -96,7 +95,7 @@ function inputKeyPress(ev){
 if(ev.key==='0' || ev.key==='1' || ev.key==='2' || ev.key==='3' || ev.key==='4' || 
 ev.key==='5' || ev.key==='6' || ev.key==='7' || ev.key==='8' || ev.key==='9' || ev.key==='.' || ev.key==='Enter'){
 
-if(ev.currentTarget===num_field && num_field.value.length===19){
+if(ev.currentTarget===num_field && num_field.value.length===16){
 ev.preventDefault()
 }
 
@@ -125,17 +124,30 @@ if(ev.currentTarget===cvc_field && ev.key==='Enter'){
     confirmBtnClick()
 }
 
-
 }
 else{
     ev.preventDefault()
 }
 }
-function num_field_process_value(){
+function num_field_process_value(ev){
+    var value = num_field.value
+    var newValue = value
 
-if(num_field.value.length===4 || num_field.value.length===9 || num_field.value.length===14 ){
-num_field.value += ' '
+    if(value.length > 4 && value.length <= 8){
+    newValue = value.slice(0, 4) + ' ' + value.slice(4)
 }
+else if(value.length > 8 && value.length <= 12){
+    newValue = value.slice(0, 4) + ' ' + value.slice(4, 8) + ' ' + value.slice(8)
+    }
+
+    else if(value.length > 12 && value.length <= 16){
+    newValue = value.slice(0, 4) + ' ' + value.slice(4, 8) + ' ' + value.slice(8, 12) + ' ' + value.slice(12)
+    }
+
+
+    document.querySelector('.card-num').innerHTML = newValue
+    
+
 
 }
 function continueBtn(){
